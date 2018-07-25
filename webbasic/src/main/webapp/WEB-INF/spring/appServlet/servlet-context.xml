@@ -3,9 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
@@ -14,10 +18,16 @@
 
 	<!-- view-controller : Controller method 없이 바로 jsp로 보내기
 		단, controller의 uri와 같은 것이 있으면 안된다. -->
-	<view-controller path="/board/writeForm.do" view-name="board/write"/>
+<!-- 	<view-controller path="/reivew/reviewForm.do" view-name="review/write"/> -->
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/css/**" location="/resources/css/" />
+	<resources mapping="/img/**" location="/resources/img/" />
+	<resources mapping="/js/**" location="/resources/js/" />
+	<resources mapping="/mail/**" location="/resources/mail/" />
+	<resources mapping="/scss/**" location="/resources/scss/" />
+	<resources mapping="/vendor/**" location="/resources/vendor/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -29,7 +39,12 @@
 	  자동 생성되는 객체 : @Controller, @Service, @Repository, @Component,
 	  @RestController(데이터만 전송:Ajax) -->
 	<context:component-scan base-package="org.zerock.web" />
-	<context:component-scan base-package="org.zerock.board" />
+	<context:component-scan base-package="org.zerock.main" />
+<!-- 	<context:component-scan base-package="org.zerock.fest" /> -->
+<!-- 	<context:component-scan base-package="org.zerock.data" /> -->
+<!-- 	<context:component-scan base-package="org.zerock.member" /> -->
+<!-- 	<context:component-scan base-package="org.zerock.notice" /> -->
+	<context:component-scan base-package="org.zerock.review" />
 	
 	
 	

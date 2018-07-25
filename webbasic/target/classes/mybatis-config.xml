@@ -4,7 +4,10 @@
 <configuration>
 
 <typeAliases >
-	<typeAlias alias="boardDTO" type="org.zerock.board.dto.BoardDTO"/>
-	<package name="org.zerock.board.dto"/>
+	<typeAlias alias="reviewDTO" type="org.zerock.review.dto.ReviewDTO"/>
+	<package name="org.zerock.review.dto"/>
 </typeAliases>
+
+
+
 </configuration>

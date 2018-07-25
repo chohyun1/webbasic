@@ -79,24 +79,12 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 				 <select class="form-control navbar-left list-group"
 				  name="searchType">
 					 <option value="n">----</option>
-					 <option value="t" 
-					 ${cri.searchType == "t"?"selected='selected'":"" } 
-					 >제목</option>
-					 <option value="c"
-					 ${cri.searchType == "c"?"selected='selected'":"" } 
-					 >내용</option>
-					 <option value="w"
-					 ${cri.searchType == "w"?"selected='selected'":"" } 
-					 >작성자</option>
-					 <option value="tc"
-					 ${cri.searchType == "tc"?"selected='selected'":"" } 
-					 >제목+내용</option>
-					 <option value="cw"
-					 ${cri.searchType == "cw"?"selected='selected'":"" } 
-					 >내용+작성자</option>
-					 <option value="tcw"
-					 ${cri.searchType == "tcw"?"selected='selected'":"" } 
-					 >제목+내용+작성자</option>
+					 <option value="t" ${cri.searchType == "t"?"selected='selected'":"" }>제목</option>
+					 <option value="c" ${cri.searchType == "c"?"selected='selected'":"" }>내용</option>
+					 <option value="w" ${cri.searchType == "w"?"selected='selected'":"" }>작성자</option>
+					 <option value="tc" ${cri.searchType == "tc"?"selected='selected'":"" }>제목+내용</option>
+					 <option value="cw" ${cri.searchType == "cw"?"selected='selected'":"" }>내용+작성자</option>
+					 <option value="tcw" ${cri.searchType == "tcw"?"selected='selected'":"" }>제목+내용+작성자</option>
 				 </select> 
 				 <input type="text" class="form-control navbar-left "
 				  placeholder="Search" name="keyword"
